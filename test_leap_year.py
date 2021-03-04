@@ -10,8 +10,16 @@ class TestCase(unittest.TestCase):
     def test_leap_year_1(self): 
         self.assertEqual(leap_year.is_leap_year(2004), True) 
 
+    # A test that checks 2001 which is not a leap year evenly 
+    # divisible by 4
     def test_leap_year_2(self): 
         self.assertEqual(leap_year.is_leap_year(2001), False) 
+
+    # A test that checks 2300 which is not a leap year because it is
+    # divisible by 100 but not 400
+    def test_leap_year_3(self): 
+        self.assertEqual(leap_year.is_leap_year(2300), False) 
+
 
 
 
